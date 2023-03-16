@@ -76,7 +76,6 @@ const displayQuiz = (data) => {
 
 // EventListener for quiz submit button
 document.querySelector("#submit").addEventListener("click", () => {
-  console.log('click btn')
   if (answers.length < 6) {
     return;
   }
@@ -113,7 +112,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   let storage = JSON.parse(localStorage.getItem("result"));
   if (storage) {
     localStorage.setItem(
-      "results",
+      "result",
       JSON.stringify([
         ...storage,
         {
@@ -125,8 +124,8 @@ document.querySelector("#submit").addEventListener("click", () => {
     );
   } else {
     localStorage.setItem(
-      "results",
-      JSON.stringify([
+      "result",
+      JSON.parse([
         {
           marks: totalMark,
           examTime: timeTaken.innerText,
