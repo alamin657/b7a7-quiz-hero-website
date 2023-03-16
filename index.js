@@ -124,7 +124,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   } else {
     localStorage.setItem(
       "result",
-      JSON.parse([
+      JSON.stringify([
         {
           marks: totalMark,
           examTime: timeTaken.innerText,
