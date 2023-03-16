@@ -53,14 +53,13 @@ const loadQuiz = async () => {
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
-  console.log(data)
   if (!data) {
-    alertContainer.innerHTML = "";
+    quizContainer.innerHTML = "";
     return;
   }
 
   data.forEach((quiz, i) => {
-    alertContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
+    quizContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
   <div class="flex items-center">
     <div class="h-8 w-8 bg-green-300 rounded-full flex justify-center items-center text-green-800 mr-3">
       ${i + 1}
@@ -184,7 +183,7 @@ document.querySelector("#submit").addEventListener("click", () => {
   }, 1500);
   window.scrollTo(0, 0);
 });
-
+// blog section
 document.getElementById('blog').addEventListener('click',function(){
   window.location.href = 'blog.html'
 })
